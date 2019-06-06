@@ -1,33 +1,28 @@
 ---
 layout: default
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s blog</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-      {% if nav.remote %}
-      <a href="{{ nav.href }}">{{ nav.name }}</a>
-      {% else %}
-      <a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
-</header>
-<div class="content list">
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% else %}
-{% for post in site.posts %}
-  <div class="list-item">
-    <h2 class="list-post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
+<div class="jek-container">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <header class="masthead">
+        <h3><a style="color: red" href="{{ site.baseurl }}/">patrykboch</a></h3>
+        <div style="text-align: right;">
+          <a href="https://twitter.com/patryk_boch?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @patryk_boch</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="github-button" href="https://github.com/patboch" aria-label="Follow @patboch on GitHub">Follow @patboch</a>
+          <a href="https://patrykboch.com/feed.xml" title="Subscribe to my feed"><img src="https://www.searchenginegenie.com/rss-images/feed-icon.gif" style="display: inline"/></a>
+        </div>
+      </header>
+      <hr/>
+    </div>
+    <div class="col-md-offset-2 col-md-8">
+      <p>dev's dull notes mostly about Ruby and JS:</p>
+    </div>
+    <div class="col-md-offset-2 col-md-8">
+        <div class="jek-content list">
+          <h2>No post found</h2>
+        </div>
+      <hr/>
+      <p style="text-align: center">&#x24D2; 2019</p>
     </div>
   </div>
-{% endfor %}
-{% endif %}
 </div>
