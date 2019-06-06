@@ -5,7 +5,7 @@ layout: default
   <div class="row">
     <div class="col-md-offset-2 col-md-8">
       <header class="masthead">
-        <h3><a style="color: red" href="{{ site.baseurl }}/">patrykboch</a></h3>
+        <h3><a style="color: red; float: left;" href="{{ site.baseurl }}/">patrykboch</a></h3>
         <div style="text-align: right;">
           <a href="https://twitter.com/patryk_boch?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @patryk_boch</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <a class="github-button" href="https://github.com/patboch" aria-label="Follow @patboch on GitHub">Follow @patboch</a>
@@ -15,12 +15,23 @@ layout: default
       <hr/>
     </div>
     <div class="col-md-offset-2 col-md-8">
-      <p>dev's dull notes mostly about Ruby and JS:</p>
+      <p>dull notes mostly about Ruby and JS:</p>
     </div>
     <div class="col-md-offset-2 col-md-8">
-        <div class="jek-content list">
-          <h2>No post found</h2>
+      <div class="jek-content list">
+        {% if site.posts.size == 0 %}
+        <h2>No post found</h2>
+        {% else %}
+        {% for post in site.posts %}
+        <div class="list-item" style="margin: 0.4em">
+        <span class="list-post-title" style="padding: 0; margin: 0;">
+        <span style="font-size: 1em; margin: 0 5px;"><i class="fas fa-pen fa-xs"></i></span>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <time style="font-family: 'Tahoma'">({{ post.date | date_to_string }})</time>
+        </span>
         </div>
+        {% endfor %}
+        {% endif %}
+      </div>
       <hr/>
       <p style="text-align: center">&#x24D2; 2019</p>
     </div>

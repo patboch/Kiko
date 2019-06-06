@@ -1,32 +1,12 @@
 ---
 layout: default
 ---
-
-<div class="jek-container">
-  <div class="row">
-    <div class="col-md-offset-2 col-md-8">
-      <header class="masthead">
-        <h3><a style="color: red" href="{{ site.baseurl }}/">patrykboch</a></h3>
-        <div style="text-align: right;">
-          <a href="https://twitter.com/patryk_boch?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @patryk_boch</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <a class="github-button" href="https://github.com/patboch" aria-label="Follow @patboch on GitHub">Follow @patboch</a>
-          <a href="https://patrykboch.com/feed.xml" title="Subscribe to my feed"><img src="https://www.searchenginegenie.com/rss-images/feed-icon.gif" style="display: inline"/></a>
-        </div>
-      </header>
-      <hr/>
-    </div>
-    <div class="col-md-offset-2 col-md-8">
-      <div>
-      <h3 class="post-title" style="margin-left: 0">{{ page.title }}</h3>
-        <div class="post-date">
-          <p><time>{{ page.date | date_to_string }}</time></p>
-        </div>
-      </div>
-      <div class="post-content">
-        {{ content }}
-      </div>
-      <hr/>
-      <p style="text-align: center">&#x24D2; 2019</p>
-    </div>
-  </div>
+<header class="masthead">
+  <h1 class="masthead-title--small">
+    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+  </h1>
+</header>
+<div class="content page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {{ content }}
 </div>
