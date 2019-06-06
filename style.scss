@@ -3,8 +3,8 @@
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -14,10 +14,11 @@ body {
 }
 
 html {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
+
 
   @media (min-width: 38em) {
     font-size: 20px;
@@ -25,10 +26,11 @@ html {
 }
 
 body {
+  font-family: 'Source Code Pro', monospace;
   color: #515151;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 a {
@@ -41,32 +43,38 @@ a {
   }
 }
 
+p {
+  text-align: justify;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 600;
-  line-height: 1.1;
-  color: #333;
-  letter-spacing: -.025rem;
+  //margin-top: 0;
+  //margin-bottom: 10px;
+  //font-weight: 600;
+  //line-height: 1.1;
+  //color: #333;
+  //letter-spacing: -.025rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 h2 {
-  font-size: 1.6rem;
+  //text-decoration: underline;
+  //font-size: 1rem;
 }
 
 h3 {
-  font-size: 1.3rem;
+  //font-size: 1.3rem;
 }
 
 h4, h5, h6 {
-  font-size: 1rem;
+  //font-size: 1rem;
 }
 
 p {
+  font: 1.5rem/2.5rem 'Tahoma';
   margin: 0 0 1rem;
 }
 
@@ -257,24 +265,27 @@ tbody tr:nth-child(odd) th {
   font-size: 1.25rem;
 }
 
-.container {
-  max-width: 38rem;
-  padding: 2rem 1.5rem;
-  margin-left:  auto;
-  margin-right: auto;
+.jek-container {
+  //max-width: 38rem;
+  padding: 0;
+  margin: 0;
+  //margin-left:  auto;
+  //margin-right: auto;
 
   @media (min-width: 38rem){
-    padding: 5rem 1rem;
+    padding: 1rem 1rem;
   }
 }
 
 .masthead {
 
   &-title {
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 1.75rem 0rem 1.75rem 0rem;
 
     a {
-      color: #333;
+      color: limegreen;
 
       &:hover,
       &:focus {
@@ -306,14 +317,16 @@ tbody tr:nth-child(odd) th {
 
   .masthead-nav {
     margin-bottom: 2rem;
+    font-family: 'Source Code Pro', monospace;
 
     a {
-      color: #aaa;
+      color: red;
       font-weight: 300;
+      font-size: 20px;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
-         -moz-transition: all .2s ease;
-              transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      transition: all .2s ease;
 
       &:hover,
       &:focus {
@@ -347,11 +360,16 @@ tbody tr:nth-child(odd) th {
 }
 
 .list {
+  margin-left: 3rem;
   &-post-title {
-    margin-bottom: .25rem;
-
     a {
-      color: #333;
+      color: #D0002A;
+      font-family: "Droid Sans", "Helvetica Neue", Helvetica, sans;
+      font-size: 17px;
+      padding: 0;
+      text-decoration: none;
+      margin: 0;
+      font-weight: 400;
 
       &:hover,
       &:focus {
@@ -360,15 +378,24 @@ tbody tr:nth-child(odd) th {
     }
   }
   &-post-date {
-    margin-bottom: 1rem;
-    font-size: .75rem;
-    text-transform: uppercase;
+    //margin-top: 1rem;
+    font-size: 1.5rem;
+    color: limegreen;
+    //text-transform: downc;
   }
 }
 
 .projects-list {
   a {
     color: #333;
+  }
+}
+
+footer {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  a {
+    color: red;
   }
 }
 
