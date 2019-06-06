@@ -1,55 +1,18 @@
-# # # # # # # #
-#   K i k o   #
-# # # # # # # #
-
 # Basic
-name:               "Kiko"
-description:        "a clean, lightweight and minimalistic blog theme for jekyll"
-
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-url:                "//kiko.gfjaru.com"
-author:             "gfjaru"
+name:         patrykboch.com
+description:  dull notes abt software
+url:          "https://patrykboch.com"
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
+author:       "patrykboch"
 twitter:
-  username:         "gfjaru"
-#facebook:
-#  app_id:           1234
-#    publisher:      1234
-
-# URL
-baseurl:            ""
-#baseurl:            "" #For Root Domain
+  username:   "patboch"
 permalink:          /:year/:month/:day/:title/
-
-# Markdown
 markdown:           kramdown
-
-# Navigation
-nav:
-  - name:           "About"
-    remote:         false
-    localpath:      "about"
-  - name:           "Download"
-    remote:         true
-    href:           "//github.com/gfjaru/Kiko/releases"
-
 # Sass
 sass:
   style:            :compressed
-
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
-
-gems:
+plugins:
   - jekyll-seo-tag
+  - jekyll-feed
